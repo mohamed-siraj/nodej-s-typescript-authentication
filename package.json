@@ -4,8 +4,9 @@
   "description": "This is authentication api system",
   "main": "build/index.js",
   "scripts": {
-    "dev": "npm run build && nodemon build/index.js",
-    "build" : "tsc"
+    "dev": "NODE_ENV=development nodemon src/index.ts",
+    "test": "npm run build && node build/index.js",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -20,12 +21,14 @@
   "devDependencies": {
     "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.21",
+    "@types/node": "^20.11.0",
     "@types/nodemon": "^1.19.6",
+    "ts-node": "^10.9.2",
+    "nodemon": "^3.0.2",
     "typescript": "^5.3.3"
   },
   "dependencies": {
     "dotenv": "^16.3.1",
-    "express": "^4.18.2",
-    "nodemon": "^3.0.2"
+    "express": "^4.18.2"
   }
 }
