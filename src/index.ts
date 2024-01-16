@@ -11,7 +11,7 @@ mongoose.connect(`${process.env.DATABASE_URI}`).then(()=> {
     console.log('DB connected......');
 }).catch(() => {
     console.log('DB is not connect......');
-})
+});
 
 /** 
  * server configuration 
